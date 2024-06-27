@@ -32,7 +32,7 @@ For more information, visit the [ThingsBoard Python REST Client GitHub repositor
 To install the tenacity library (to process retry logic, otherwise delete module and @retry from the file), run:
 
 ```bash
-pip3 install tb-rest-client
+pip3 install tenacity
 ```
 ## Usage
 
