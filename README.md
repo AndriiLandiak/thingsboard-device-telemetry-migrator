@@ -42,7 +42,11 @@ pip3 install tenacity
 python3 import_export_tool.py export --host HOST --username USERNAME --password PASSWORD --fileName FILENAME --startTs START_TS --endTs END_TS --deviceNames 'DEVICE_A,DEVICE_B' [--keys 'a,b,c'] [--chunkLimit 1024] [--timeLimit 60]
 ```
 
-Where keys, chunkLimit (default 1024), and timeLimit (default 60 minutes) are optional. You can specify telemetry keys to export, or leave as None to export all keys.
+- **keys**: (Optional) Specify telemetry keys to export. If not specified, all keys will be exported.
+- **chunkLimit**: (Optional) The maximum number of records to fetch in one chunk. The default is 1024.
+- **timeLimit**: (Optional) The time interval, in minutes, for fetching chunkLimit elements. The default is 60 minutes.
+
+**Note**: If `--keys` are not specified, all keys will be used for the export. The timeLimit is used to fetch chunkLimit elements for a specific amount of time. For example, if the interval between startTs and endTs is 2 days, the tool will fetch chunkLimit elements in steps defined by timeLimit until it reaches the end of the 2-day period.
 
 ### Importing telemetry data for devices by names
 
