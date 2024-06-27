@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **ThingsBoard Device Telemetry Migrator** is a Python tool designed to facilitate the migration of telemetry data for a specified list of device names in ThingsBoard. This tool provides a seamless way to export telemetry data to a file and then import it back into a ThingsBoard account. It is especially useful for backup, restoration, and data migration tasks.
+The **ThingsBoard Device Telemetry Migrator** is a Python tool designed to facilitate the migration of telemetry data for a specified list of device names in ThingsBoard. This tool provides a seamless way to export telemetry data to a file and then import it back into a ThingsBoard account. It is beneficial for backup, restoration, and data migration tasks.
 
 ## Features
 
@@ -18,7 +18,7 @@ To use this tool, you need to install the `ThingsBoard REST API client` and the 
 
 ### Installing ThingsBoard REST API Client
 
-The ThingsBoard REST API Client helps you interact with ThingsBoard REST API from your Python script. With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The ThingsBoard REST API Client helps you interact with the ThingsBoard REST API from your Python script. With Python Rest Client you can programmatically create assets, devices, customers, users, and other entities and their relations in ThingsBoard.
 
 The recommended method for installing the REST Client is via pip:
 
@@ -42,7 +42,7 @@ pip3 install tb-rest-client
 python3 import_export_tool.py export --host HOST --username USERNAME --password PASSWORD --fileName FILENAME --startTs START_TS --endTs END_TS --deviceNames 'DEVICE_A,DEVICE_B' [--keys 'a,b,c'] [--chunkLimit 1024] [--timeLimit 60]
 ```
 
-Where keys, chunkLimit (default 1024), and timeLimit (default 60 minutes) is optional. You can specify telemetry keys to export, or leave as None to export all keys.
+Where keys, chunkLimit (default 1024), and timeLimit (default 60 minutes) are optional. You can specify telemetry keys to export, or leave as None to export all keys.
 
 ### Importing telemetry data for devices by names
 
